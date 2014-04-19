@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Changelog for Kendo UI v2013.3.1119</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: .75em/1.5 Tahoma, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-size: normal;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: normal;
+
+            margin: 1.2em 0 .3em;
+            padding-bottom: .2em;
+        }
+
+        #page {
+            width: 50em;
+            margin: 0 auto 2em;
+            border-radius: 0 0 1em 1em;
+            box-shadow: 0 0 10px #ccc;
+            padding: 1em 2em 2em;
+        }
+
+        .poBoxIcon {
+            float: left;
+            font-size: 2em;
+            margin: 1.2em .5em 0 0;
+        }
+
+        .poTopLine {
+            border-top: 2px solid #e1e1e1;
+            margin: 17px 0 40px 0;
+        }
+    </style>
+
+    <base href="http://www.kendoui.com/web/whats-new/release-notes/">
+</head>
+<body>
+    <div id="page">
+        <h1 class="title">Release notes for Kendo UI v2013.3.1119</h1>
+
+        <h1>Framework</h1>
+        <div class="tClear poTopLine">
+            <div class="poBoxIconText">
+                <p><strong>What's new</strong></p><ul><li>Generate source maps for Kendo minified files</li><li>iOS 7 support</li></ul>
+                
+            </div>
+        </div>
+
+
+        <div class="tClear poTopLine">
+            <h2>DataSource</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Sorting is not preserved in grouped virtualized DataSource with local oprations</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Draggable</h2>
+            <p><strong>What's new</strong></p><ul><li>Mobile friendly draggable support - holdToDrag configuration option</li></ul>
+            
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Editor</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Editor fires change event when not encoded and blurred or toolbar is clicked</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Globalization</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>parseFloat does not parse correctly numbers with exponent when the culture uses comma as decimal separator</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>MVVM</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>source binding elements are not updated correctly when they are bound to a multiselect value</li><li>Databound widget child items are not bound to the correct items, if DataSource server grouping is enabled</li></ul>
+        </div>
+        <h1>Web</h1>
+        <div class="tClear poTopLine">
+            <div class="poBoxIconText">
+                <p><strong>What's new</strong></p><ul><li>Improved integration with Twitter Bootstrap</li><li>Improve widget flexibility to enable responsive pages</li><li>"Modern UI" Dimensions</li></ul>
+                <p><strong>What's fixed</strong></p><ul><li>IE7 detection regression</li></ul>
+            </div>
+        </div>
+
+        <h1>New UI Widgets</h1>
+        <div class="tClear poTopLine">
+            <div class="poBoxIconText">
+                <h2>Button</h2>
+            </div>
+        </div>
+        <div class="tClear poTopLine">
+            <div class="poBoxIconText">
+                <h2>ProgressBar</h2>
+            </div>
+        </div>
+
+        <h1>UI Widgets Features and Updates</h1>
+
+        <div class="tClear poTopLine">
+            <h2>AutoComplete</h2>
+            <p><strong>What's new</strong></p><ul><li>Header template</li><li>Scroll to the selected item on mobile browsers</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Widget does not persist input value on initialization</li><li>AutoComplete and MultiSelect loading indicator is misplaced in RTL mode</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Calendar</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Widget falls into infinitive loop if value is not valid date</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>ColorPicker</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>ColorPicker bug after calling enable(true)</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>ComboBox</h2>
+            <p><strong>What's new</strong></p><ul><li>Support for a specific cascade data field</li><li>Header template</li><li>Scroll to the selected item on mobile browsers</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Widget throws a 'nextSibling is undefined' exception when an empty data source is set</li><li>Value assigned initially to the input, should be persisted if not matched in the data</li><li>The options.text is not set to the input element before the cascading functionality is inialized</li><li>Exception is raised on item selection when the widget is empty</li><li>ComboBox loading icon not visible when using the Metro theme</li><li>Widget focuses input on initial load when 'suggest' is enabled</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>DatePicker</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>IE10: DatePicker's calendar closes automatically when widget is placed inside Kendo Menu</li><li>The max() method does not update the configuration of the widget</li><li>18.10.1992 selects 17.10.1992 in DatePicker when TimeZone set to UTC - 3:00 Brasilia</li><li>Widget clears the initial value if it is not valid</li><li>Widget throws "Unsupported command" in IE8</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>DateTimePicker</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Widget clears the initial value if it is not valid</li><li>Widget throws "Unsupported command" in IE8</li><li>DateTimePicker selects next month if min date is clicked</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>DropDownList</h2>
+            <p><strong>What's new</strong></p><ul><li>Support for input template</li><li>Support for a specific cascade data field</li><li>Header template</li><li>Scroll to the selected item on mobile browsers</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Widget does not select option label value when MVVM source binding is used</li><li>The 'index' property is not working with MVVM or when the widget is initialized from select element</li><li>Popup width is incorrectly calculated when box model is changed to border-box</li><li>Search inside the widget does not work when long sequence is typed.</li><li>Widget throws JavaScript exception when try to search data set through setDataSource method</li><li>Widget performs a search in Firefox when any control key is pressed</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Editor</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Inline editor nested in lists behaves unexpectedly</li><li>tools.tooltip configuration is not honored when initializing tools</li><li>Color drop-downs are not closed when clicking on createTable tool</li><li>Editor destroy method does not destroy all of its components when using inline editing</li><li>Indent / outdent in inline editor without content apply styles to container</li><li>Inline editor throws exception when used in PopUp editor in IE8 </li><li>Formatting drop-down is not expanded properly on a page with Twitter Bootstrap</li><li>Paste event does not report what is pasted when inline editing in IE10</li><li>Unable to type after using drop-down lists on iPad</li><li>Inserting list in root-level inline editor converts editor element to list</li><li>Cursor is not visible when inserting hyperlink and tabbing to the "Text" field</li><li>JavaScript error when pasting invalid HTML in IE8</li><li>Regression in keyboard navigation</li><li>refresh method throws exception in inline mode</li><li>Inline Editor is not focused when user closes viewHtml dialog</li><li>Editor initialization fails when document.domain is set</li><li>Image percentage width is stripped from style attribute and converted to px</li><li>Tables pasted from MS Word lack borders</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Globalization</h2>
+            <p><strong>What's new</strong></p><ul><li>kendo.parseDate should set default date to today when method parses time values</li></ul>
+            
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Grid</h2>
+            <p><strong>What's new</strong></p><ul><li>Adaptive mode that allows sizing for mobile screens</li><li>Grid column menu templates update</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Grid fails to focus editable widget in IE8</li><li>Filter menu PopUp in IE8 is rendered too small</li><li>Style issue for dirty-cell indicator of the Grid </li><li>IE: Field value not updated when using batch editing and multiple selection with numerictextbox editor</li><li>Select element editor cannot be opened, if multiple row selection and inline editing are enabled</li><li>String textbox in Grid filter menu does not have a top margin</li><li>Some column headers are inaccessible when horizontal scrolling is used and there are no records</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>MVVM</h2>
+            <p><strong>What's new</strong></p><ul><li>The value binding supports &lt;input type="date"&gt; and &lt;input type="datetime-local"&gt;</li></ul>
+            
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Menu</h2>
+            <p><strong>What's new</strong></p><ul><li>Allow long Menu item groups to be scrollable and fit the screen if they have no child groups</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Menu links are not activated via keyboard navigation</li><li>First click does not fire a select event on a  tablet device.</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>MultiSelect</h2>
+            <p><strong>What's new</strong></p><ul><li>Header template</li><li>Support for multiple selection without closing the popup</li><li>Scroll to the selected item on mobile browsers</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Items cannot be deleted when widget is nested in a div with scroller</li><li>AutoComplete and MultiSelect loading indicator is misplaced in RTL mode</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>NumericTextBox</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Accepts alphabetical symbols, entered via the numeric keyboard in certain languages</li><li>NumericTextBox does not handle correctly keyboards with different layout</li><li>Widget throws "Unsupported command" in IE8</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Pager</h2>
+            <p><strong>What's new</strong></p><ul><li>Add classes to navigation links for easier styling</li></ul>
+            
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Scheduler</h2>
+            <p><strong>What's new</strong></p><ul><li>Show loading indicator</li><li>Mobile Timezone editor</li><li>Add slot template for day and week view</li><li>Add "last day" option to the Monthly recurring rule</li><li>Ability to freely resize and move events</li><li>Adaptive mode that allows sizing for mobile screens</li><li>Work hours styling</li><li>Work week view</li><li>Exact time rendering</li><li>Moving an occurrence with "edit series" option causes it to vanish</li><li>k-scheduler-agenda CSS class is renamed to k-scheduler-agendaview</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>recurrenceEditor frequency option is not set correctly</li><li>Month view's more button is not placed correctly if some custom height is set to the scheduler</li><li>Recurrence logic does not expand monthly frequency correctly when an interval rule is defined</li><li>Recurrence logic does not expand weekly frequency correctly when an interval rule is defined</li><li>Event which starts at the end time of the day view is not position correctly</li><li>Event text may blend with the background for some skins</li><li>All day event which ends at the start of month view is not position correctly</li><li>Delete button and resize handles are not shown in IE8</li><li>Event which ends at the beginning of the month view is rendered incorrectly </li><li>Widget does not render a recurring multi-day event in Day view</li><li>Monthly recurring event is shown inconsistently between months</li><li>Weekly recurrence does not honour week day when when render events in Month view</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Slider</h2>
+            <p><strong>What's new</strong></p><ul><li>Improve large ticks algorithm.</li></ul>
+            
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Splitter</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Nested Kendo UI MVC Splitter does not resize correctly upon initialization if adjacent parent pane contains another nested Splitter</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>TabStrip</h2>
+            <p><strong>What's new</strong></p><ul><li>Change TabStrip Ajax loading animation to a modern, more subtle one.</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>TabStrip does not allow to focus an input element placed inside a PanelBar widget</li><li>TabStrip displays multiple tabs as active if clicking too quickly on them</li><li>Widget renders ARIA attributes when id is not defined</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>TimePicker</h2>
+            <p><strong>What's new</strong></p><ul><li>Scroll to the selected item on mobile browsers</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Widget clears the initial value if it is not valid</li><li>Widget throws "Unsupported command" in IE8</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>TreeView</h2>
+            <p><strong>What's new</strong></p><ul><li>Add expandPath API method</li></ul>
+            <p><strong>What's fixed</strong></p><ul><li>Indeterminate state is not updated when loading children asynchronously</li><li>Simple link list is not converted correctly to a tree</li></ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Window</h2>
+            
+            <p><strong>What's fixed</strong></p><ul><li>Opened pop-ups remain visible after window is closed</li><li>Physically nesting Windows causes side effects related to title() method and closing action</li><li>restore() method will not return widget instance if the Window is already in restored state</li><li>title() does not update internal configuration, causing revert when setOptions is used</li><li>Window resets its size when setOptions() method is used after resizing</li><li>Maximized Windows should not have rounded corners</li><li>Window does not minimize completely</li></ul>
+        </div>
+    </div>
+</body>
+</html>

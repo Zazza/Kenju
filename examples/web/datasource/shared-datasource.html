@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shared DataSource</title>
+    <meta charset="utf-8">
+    <link href="../../content/shared/styles/examples-offline.css" rel="stylesheet">
+    <link href="../../../styles/kendo.common.min.css" rel="stylesheet">
+    <link href="../../../styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="../../../styles/kendo.default.min.css" rel="stylesheet">
+
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/kendo.web.min.js"></script>
+    <script src="../../content/shared/js/console.js"></script>
+    <script>
+        
+    </script>
+    
+    
+</head>
+<body>
+    
+        <a class="offline-button" href="../index.html">Back</a>
+    
+            <div id="example" class="k-content">
+            <div class="demo-section">
+                <div>
+                    <h3>Products</h3>
+                    <div class="section-box">
+                        <label for="productName">Select product name: </label>
+                        <input id="productName" name="productName" style="width:300px;" />
+                    </div>
+                </div>                
+                 <div id="grid"></div>
+            </div>
+
+            <style scoped>
+                
+                #grid 
+                {
+                    margin-top: 10px;
+                }
+                
+                .section-box {
+                    margin-top: 20px;
+                    padding: 10px;
+                    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.45), inset 0 0 30px rgba(0,0,0,0.07);
+                    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.45), inset 0 0 30px rgba(0,0,0,0.07);
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.45), inset 0 0 30px rgba(0,0,0,0.07);
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    border-radius: 8px;                    
+                }       
+                                  
+            </style>
+
+            <script>
+               $(function () {
+                    var productsDataSource = new kendo.data.DataSource({
+                            type: "odata",
+                            serverFiltering: true,
+                            serverPaging: true,
+                            serverSorting: true,
+                            pageSize: 10,
+                            transport: {
+                                read: "http://demos.kendoui.com/service/Northwind.svc/Products"
+                            },
+                    });   
+
+                    productsDataSource.read();
+
+                    $("#productName").kendoAutoComplete({
+                        autoBind: false,
+                        dataSource: productsDataSource,
+                        dataTextField: "ProductName",
+                        filter: "contains",
+                        minLength: 2                                                        
+                    });
+                    
+                    $("#grid").kendoGrid({
+                        dataSource: productsDataSource,
+                        autoBind: false,
+                        pageable: true,
+                        height: 300,
+                        selectable: true,
+                        columns: [
+                            {field: "ProductName", title: "ProductName"},
+                            { field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: "100px" },
+                            { field: "UnitsInStock", title:"Units In Stock", width: "100px" },
+                            { field: "Discontinued", width: "100px" }
+                        ]
+                    });                                                                         
+                });
+
+            </script>
+        </div>
+
+	
+	
+		<div class='demo-section'>
+			<h3>Note:</h3>
+			<p>
+				Security restrictions prevent this example from working in all browsers when the page is loaded from the file system (via file:// protocol). 
+				If the demo is not working as expected, please host the Kendo folder on a web server. 
+			</p>
+		</div>
+			
+</body>
+</html>
